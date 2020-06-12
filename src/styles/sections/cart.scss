@@ -507,16 +507,14 @@
 
 .cart--trigger__container {
   position: relative;
-  width: 3rem;
-  height: 3rem;
 
   z-index: 100;
 }
 
 .cart--count__container {
   position: absolute;
-  top: -0.2rem;
-  right: -0.8rem;
+  top: -0.5rem;
+  right: -1.3rem;
   font-weight: 700;
   /*background-color: white;
   text-align: center;
@@ -551,4 +549,8 @@
   cursor: pointer;
 
   transform: scale(2);
+}
+
+.cart--icon__container {
+  padding: 0;
 }

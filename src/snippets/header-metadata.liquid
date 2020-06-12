@@ -1,0 +1,16 @@
+{%- if settings.favicon -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+{%- endif -%}
+
+{% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+{% endif %}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="{{ settings.color_button }}">
+
+{% render 'header-social-metatags' %}
+
+<link rel="canonical" href="{{ canonical_url }}">

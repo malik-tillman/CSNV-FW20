@@ -40,9 +40,12 @@
 /*
 * Cart Icons
 */
-.icon-bag {
-  width: $cart-icon-size;
-  height: $cart-icon-size;
+.icon-bag, .icon-login {
+  //width: $cart-icon-size;
+  //height: $cart-icon-size;
+
+  width: 25px;
+  height: 25px;
 }
 
 /*

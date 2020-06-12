@@ -1,0 +1,15 @@
+<div class="search__container" tabindex="0">
+    <form class="search__form" action="{{ routes.search_url }}">
+        <label for="q" class="visually-hidden">Search</label>
+
+        <div class="search--mask">
+            <input type="text" placeholder="Search..." id="q" name="q">
+        </div>
+
+        <button class="search--button">
+            {% render "icon-search" %}
+
+            <span class="visually-hidden">Search</span>
+        </button>
+    </form>
+</div>
