@@ -1,0 +1,175 @@
+<div class="collection-preview__container">
+    <h1 class="collection-preview__title">{{ section.settings.collection_title }}</h1>
+
+    <div class="collection-preview__images-wrapper">
+        <div class="collection-preview__card first">
+            <h2 class="collcetion-preview__image-phrase visually-hidden">{{ section.settings.collection_phrase1 }}</h2>
+            <a class="collection-preview__image-container" href="{{ section.settings.collection_url1 }}">
+                <img class="collection-preview__image lazyload" src="{{ section.settings.collection_image1 | img_url: 'master'}}" alt="{{ section.settings.collection_alt1 }}">
+            </a>
+        </div>
+
+        <div class="collection-preview__card second">
+            <h2 class="collcetion-preview__image-phrase visually-hidden">{{ section.settings.collection_phrase2 }}</h2>
+            <a class="collection-preview__image-container" href="{{ section.settings.collection_url2 }}">
+                <img class="collection-preview__image lazyload" src="{{ section.settings.collection_image2 | img_url: 'master'}}" alt="{{ section.settings.collection_alt2 }}">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+    {
+    "name": "Collection Preview",
+    "settings":[
+    {
+    "type": "header",
+    "content": "Collection Preview"
+    },
+    {
+    "type": "text",
+    "id": "collection_title",
+    "label": "Title",
+    "placeholder": "Ex. \"The World is Yours\""
+    },
+    {
+    "type": "header",
+    "content": "Image 1"
+    },
+    {
+    "type":"image_picker",
+    "id":"collection_image1",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "collection_phrase1",
+    "label": "Phrase",
+    "placeholder": "Ex. \"The World is Yours\""
+    },
+    {
+    "type": "url",
+    "id": "collection_url1",
+    "label": "URL"
+    },
+    {
+    "type": "text",
+    "id": "collection_alt1",
+    "label": "Alt Text",
+    "placeholder": "Ex. \"CSNV Collection Image\""
+    },
+    {
+    "type": "header",
+    "content": "Image 2"
+    },
+    {
+    "type":"image_picker",
+    "id":"collection_image2",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "collection_phrase2",
+    "label": "Phrase",
+    "placeholder": "Ex. \"The World is Yours\""
+    },
+    {
+    "type": "url",
+    "id": "collection_url2",
+    "label": "URL"
+    },
+    {
+    "type": "text",
+    "id": "collection_alt2",
+    "label": "Alt Text",
+    "placeholder": "Ex. \"CSNV Collection Image\""
+    }
+    ],
+    "presets":[
+    {
+    "name": "Collection Preview",
+    "category": "Image",
+    "settings":{}
+    }
+    ]
+    }
+{% endschema %}
+
+<script>
+    let blahjson =
+        {
+            "name": "Collection Preview",
+            "settings":[
+                {
+                    "type": "header",
+                    "content": "Collection Preview"
+                },
+                {
+                    "type": "text",
+                    "id": "collection_title",
+                    "label": "Title",
+                    "placeholder": "Ex. \"The World is Yours\""
+                },
+                {
+                    "type": "header",
+                    "content": "Image 1"
+                },
+                {
+                    "type":"image_picker",
+                    "id":"collection_image1",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "collection_phrase1",
+                    "label": "Phrase",
+                    "placeholder": "Ex. \"The World is Yours\""
+                },
+                {
+                    "type": "url",
+                    "id": "collection_url1",
+                    "label": "URL"
+                },
+                {
+                    "type": "text",
+                    "id": "collection_alt1",
+                    "label": "Alt Text",
+                    "placeholder": "Ex. \"CSNV Collection Image\""
+                },
+                {
+                    "type": "header",
+                    "content": "Image 2"
+                },
+                {
+                    "type":"image_picker",
+                    "id":"collection_image2",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "collection_phrase2",
+                    "label": "Phrase",
+                    "placeholder": "Ex. \"The World is Yours\""
+                },
+                {
+                    "type": "url",
+                    "id": "collection_url2",
+                    "label": "URL"
+                },
+                {
+                    "type": "text",
+                    "id": "collection_alt2",
+                    "label": "Alt Text",
+                    "placeholder": "Ex. \"CSNV Collection Image\""
+                }
+            ],
+            "presets":[
+                {
+                    "name": "Collection Preview",
+                    "category": "Image",
+                    "settings":{}
+                }
+            ]
+        }
+</script>

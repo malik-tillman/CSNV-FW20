@@ -1,0 +1,51 @@
+<div class="header__container">
+    <div class="header__section">
+        <button class="menu__button"><span>Menu</span></button>
+
+        <div class="logo__container">
+            <div class="logo__intrinsic">
+                <a class="logo__link" href="/" title="CSNV Home">
+                    <span class="header__logo"></span>
+                </a>
+
+                <small class="logo__rights--text visually-hidden">
+                    All Rights Reserved <br>&copy; 2020 CSNV studio
+                </small>
+            </div>
+        </div>
+
+        <div class="cart-nav__container">
+            <nav class="nav__container" role="navigation">
+                <div class="visually-hidden">{% include 'search-drawer' %}</div>
+
+                {% include 'site-nav'%}
+            </nav>
+
+            <div class="cart--trigger__container">
+                {% if cart.item_count > 0 %}
+                    <div class="cart--count__container">
+                        <span id="cart--count" class="cart--count" aria-label="Amount of items in cart">[{{ cart.item_count }}]</span>
+                    </div>
+
+                {% else %}
+                    <div class="cart--count__container">
+                        <span id="cart--count" class="cart--count" aria-label="Amount of items in cart"></span>
+                    </div>
+                {% endif %}
+
+                <button class="cart--icon__container" type="button">Cart</button>
+            </div>
+        </div>
+    </div>
+
+    {% render 'marquee' %}
+</div>
+
+
+
+{% schema %}
+    {
+    "name": "Header",
+    "settings": []
+    }
+{% endschema %}

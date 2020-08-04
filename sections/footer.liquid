@@ -1,0 +1,47 @@
+<footer class="footer">
+    <div class="social__footer">
+        <ul>
+            {% if settings.facebook_link %}
+                <li>
+                    <a href="{{ settings.facebook_link }}" class="side-bar__social__link side-bar__social--facebook" target="_blank">
+                        {% render "icon-facebook" %}
+                        <span class="visually-hidden">Facebook</span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% if settings.instagram_link %}
+                <li>
+                    <a href="{{ settings.instagram_link }}" class="side-bar__social__link side-bar__social--instagram" target="_blank">
+                        {% render "icon-instagram" %}
+                        <button class="instagram-text">Instagram</button>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% if settings.twitter_link %}
+                <li>
+                    <a href="{{ settings.twitter_link }}" class="side-bar__social__link side-bar__social--twitter" target="_blank">
+                        {% render "icon-twitter" %}
+                        <span class="visually-hidden">Twitter</span>
+                    </a></li>
+            {% endif %}
+
+            {% if settings.tiktok_link %}
+                <li>
+                    <a href="{{ settings.tiktok_link }}" class="side-bar__social__link side-bar__social--tiktok" target="_blank">
+                        {% render "icon-twitter" %}
+                        <span class="visually-hidden">Tik Tok</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</footer>
+
+{% schema %}
+    {
+    "name": "Footer",
+    "settings": []
+    }
+{% endschema %}

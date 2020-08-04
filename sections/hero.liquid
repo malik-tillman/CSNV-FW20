@@ -1,0 +1,64 @@
+<div class="hero-container">
+    <div class="hero-image"></div>
+    <h1 class="hero-name">{{ section.settings.hero_name }}</h1>
+</div>
+
+<style>
+    .hero-image {
+        background-image: url("{{ section.settings.hero_image | img_url: 'master' }}");
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 737px) {
+        .hero-image {
+            background-image: url("{{ section.settings.hero_mobile_image | img_url: 'master' }}");
+            background-size: cover;
+        }
+    }
+</style>
+
+{% schema %}
+    {
+    "name": "Hero",
+    "settings":[
+    {
+    "type": "header",
+    "content": "Hero Image Content"
+    },
+    {
+    "type":"image_picker",
+    "id":"hero_image",
+    "label": "Image"
+    },
+    {
+    "type":"image_picker",
+    "id":"hero_mobile_image",
+    "label": "Mobile Image"
+    },
+    {
+    "type": "text",
+    "id": "hero_name",
+    "label": "Name",
+    "placeholder": "Ex. \"The World is Yours\""
+    },
+    {
+    "type": "url",
+    "id": "hero_url",
+    "label": "URL"
+    },
+    {
+    "type": "text",
+    "id": "hero_alt",
+    "label": "Alt Text",
+    "placeholder": "Ex. \"CSNV Hero Image\""
+    }
+    ],
+    "presets":[
+    {
+    "name": "Hero",
+    "category": "Image",
+    "settings":{}
+    }
+    ]
+    }
+{% endschema %}

@@ -1,18 +1,19 @@
 {
-  "name": "Dev-master",
-  "version": "0.0.1",
-  "devDependencies": {
-    "@shopify/slate-tools": "0.14.0"
-  },
+  "name": "csnv-fw20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "layout/theme.liquid",
   "scripts": {
-    "start-dev": "slate start --env=dev",
-    "watch-dev": "slate watch --env=dev",
-    "start-prod": "slate start --env=prod",
-    "watch-prod": "slate watch --env=prod"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@shopify/slate": "^0.14.0",
-    "bootstrap": "^4.5.0",
-    "lazysizes": "^5.2.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malik-tillman/CSNV-FW20.git"
+  },
+  "author": "Malik Tillman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malik-tillman/CSNV-FW20/issues"
+  },
+  "homepage": "https://github.com/malik-tillman/CSNV-FW20#readme"
 }

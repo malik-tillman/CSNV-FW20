@@ -1,0 +1,122 @@
+<div class="final-exchange__container">
+    <div class="final-exchange__text-container">
+        <p class="final-exchange__text first">{{ section.settings.text1 }}</p>
+        <p class="final-exchange__text second">{{ section.settings.text2 }}</p>
+        <p class="final-exchange__text third">{{ section.settings.text3 }}</p>
+        <p class="final-exchange__text fourth">{{ section.settings.text4 }}</p>
+        <p class="final-exchange__text fifth">{{ section.settings.text5 }}</p>
+        <h2 class="final-exchange__text final-exchange__title">{{ section.settings.title }}</h2>
+    </div>
+    <img class="final-exchange__image" src="{{ section.settings.image | img_url:'master' }}" alt="The Final Exchange Image">
+</div>
+
+{% schema %}
+    {
+    "name": "The Final Exchange",
+    "settings":[
+    {
+    "type": "header",
+    "content": "The Final Exchange"
+    },
+    {
+    "type":"image_picker",
+    "id":"image",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title",
+    "label": "Title",
+    "placeholder": "Ex. \"The Final Exchange F/W 2020\""
+    },
+    {
+    "type": "text",
+    "id": "text1",
+    "label": "First Text"
+    },
+    {
+    "type": "text",
+    "id": "text2",
+    "label": "Second Text"
+    },
+    {
+    "type": "text",
+    "id": "text3",
+    "label": "Third Text"
+    },
+    {
+    "type": "text",
+    "id": "text4",
+    "label": "Fourth Text"
+    },
+    {
+    "type": "text",
+    "id": "text5",
+    "label": "Fifth Text"
+    }
+    ],
+    "presets":[
+    {
+    "name": "The Final Exchange",
+    "category": "Image",
+    "settings":{}
+    }
+    ]
+    }
+{% endschema %}
+
+<script>
+    let blahjson =
+        {
+            "name": "The Final Exchange",
+            "settings":[
+                {
+                    "type": "header",
+                    "content": "The Final Exchange"
+                },
+                {
+                    "type":"image_picker",
+                    "id":"image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "placeholder": "Ex. \"The Final Exchange F/W 2020\""
+                },
+                {
+                    "type": "text",
+                    "id": "text1",
+                    "label": "First Text"
+                },
+                {
+                    "type": "text",
+                    "id": "text2",
+                    "label": "Second Text"
+                },
+                {
+                    "type": "text",
+                    "id": "text3",
+                    "label": "Third Text"
+                },
+                {
+                    "type": "text",
+                    "id": "text4",
+                    "label": "Fourth Text"
+                },
+                {
+                    "type": "text",
+                    "id": "text5",
+                    "label": "Fifth Text"
+                }
+            ],
+            "presets":[
+                {
+                    "name": "The Final Exchange",
+                    "category": "Image",
+                    "settings":{}
+                }
+            ]
+        }
+</script>
