@@ -1,7 +1,11 @@
 <div class="fw20__container">
     <div class="fw20-image__container">
-        <div class="fw20-image-overlay"></div>
-        <img src="{{ section.settings.image | img_url:'master' }}" alt="{{ section.settings.imageAlt }}">
+        <video autoplay muted loop>
+            <source src="https://cdn.shopify.com/s/files/1/0188/6325/9699/files/hero-video.mp4?v=1599159038">
+        </video>
+        <div class="fw20-image-overlay">
+            <img src="{{ section.settings.image | img_url:'master' }}" alt="{{ section.settings.imageAlt }}">
+        </div>
     </div>
 </div>
 

@@ -135,10 +135,10 @@ const processCallback = e => {
 };
 
 const updateImageOverlays = () => {
-    let fw20Images = document.querySelector('.fw20-image__container img');
-
-    document.querySelector('.fw20-image-overlay').style.width = `${fw20Images.clientWidth}px`;
-    document.querySelector('.fw20-image-overlay').style.height = `${fw20Images.clientHeight}px`;
+    // let fw20Images = document.querySelector('.fw20-image__container img');
+    //
+    // document.querySelector('.fw20-image-overlay').style.width = `${fw20Images.clientWidth}px`;
+    // document.querySelector('.fw20-image-overlay').style.height = `${fw20Images.clientHeight}px`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {

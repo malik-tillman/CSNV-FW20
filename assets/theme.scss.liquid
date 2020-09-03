@@ -3520,14 +3520,14 @@ $card-height: 35vmax;
 #size-chart__lookbook-container {
   @include flexbox();
   @include align-items(center);
-  @include flex-direction(column);
+  @include justify-content(center);
 
-  position: absolute;
+  position: fixed;
   top: 0;
   display: none;
 
   width: 100vw;
-  height: 100%;
+  height: 100vh;
 
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(5px);
@@ -3539,13 +3539,11 @@ $card-height: 35vmax;
 }
 
 .size-chart__lookbook-content {
-  position: sticky;
-  top: 2em;
+
 }
 
 #size-chart__image {
-  max-height: 90vh;
-  max-width: 90vw;
+  max-width: 100%;
 }
 
 .product__info__badge-container {
@@ -3979,21 +3977,25 @@ $card-height: 35vmax;
   @include flex-direction(column);
   @include justify-content(center);
   @include align-items(center);
+  position: relative;
 
   max-height: 80%;
   max-width: 100%;
-
-  img {
-    max-height: 100%;
-  }
 }
 
 .fw20-image-overlay {
+  display: inherit;
   position: absolute;
   background-color: #afafaf;
+  width: 100%;
 
-  opacity: .3;
   transition: opacity 1s ease;
+
+  overflow: hidden;
+
+  video {
+    width: 100%;
+  }
 }
 
 .fw20-image-overlay:hover {
@@ -4123,7 +4125,6 @@ $card-height: 35vmax;
   }
 
   main, .video-container, .marquee__section, .logo__container, .cart--trigger__container {
-    will-change: transform, opacity, filter;
     transition: transform .6s ease-in-out,
                 opacity .5s ease-in-out,
                 filter .45s ease-in-out,
@@ -4334,7 +4335,7 @@ body.template--cart.shopping-cart--is-open {
   }
 
   .fw20-image__container {
-    max-width: 50%;
+    //max-width: 50%;
     max-height: unset;
   }
 }
