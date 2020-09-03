@@ -1,4 +1,5 @@
-let page = '{{ template }}';
+console.log(page);
+
 let vContent = document.body;
 
 let removeTriggers = document.getElementsByClassName('.shopping-cart__cart-remove');
@@ -6,15 +7,7 @@ let itemContainer = document.getElementsByClassName('shopping-cart__item');
 let removeAllTrigger = document.getElementById('remove-all__btn');
 let indexCallback = 0;
 
-let headerSection = document.querySelector('.header__container').style;
-let marqueeSection = document.getElementsByClassName('marquee__section')[0].style;
-let logoContainer = document.getElementsByClassName('logo__container')[0].style;
-let navContainer = document.querySelector('.nav__container').style;
 let rightsTextHTMLElement = document.getElementsByClassName('logo__rights--text')[0];
-let rightsText = rightsTextHTMLElement.style;
-let rightsHeight = rightsTextHTMLElement.offsetHeight + "px";
-
-let cookiesContainer = document.querySelector("#disclaimer__container");
 
 let lastScrollPos = 0;
 let lastScrollDownPos = 0;
@@ -29,7 +22,6 @@ const initialize = () => {
         //nav_dropdown_trigger.forEach(element => element.addEventListener('mouseleave', toggleDropdownMenu));
     }
 
-
     /* Initialize Menu Trigger Event Listener */
     let menu_triggers = [document.querySelector(".menu__button"), document.querySelector(".nav__mask")];
     if (menu_triggers && Array.isArray(menu_triggers))
@@ -43,13 +35,8 @@ const initialize = () => {
     if (cart_triggers && Array.isArray(cart_triggers))
         cart_triggers.forEach(element => element.addEventListener('click', toggleCart));
 
-    let bounceContainer = document.querySelector(".bounce--container")
-
-    let logoContainer = document.querySelector(".logo__container").style;
-    setTimeout(() => {
-        //logoContainer.position = "fixed";
-        //logoContainer.top = "0";
-    }, 5000)
+    if (page === "index")
+        updateImageOverlays();
 };
 
 const toggleDropdownMenu = ev => {
@@ -147,12 +134,12 @@ const processCallback = e => {
     location.reload();
 };
 
-const animateHeader = (color, height, margin, padding) => {
-    headerSection.backgroundColor = color;
-    rightsText.height = height;
-    logoContainer.margin = margin;
-    navContainer.paddingLeft = padding
-};
+const updateImageOverlays = () => {
+    let fw20Images = document.querySelector('.fw20-image__container img');
+
+    document.querySelector('.fw20-image-overlay').style.width = `${fw20Images.clientWidth}px`;
+    document.querySelector('.fw20-image-overlay').style.height = `${fw20Images.clientHeight}px`;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     initialize();
@@ -169,14 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 });
 
-document.querySelector('.disclaimer--accept').addEventListener("click", function () {
-    localStorage.setItem('isCookieAcceptedByPrompt', "true");
-    cookiesContainer.style.opacity = "0";
-    document.querySelector('.disclaimer--accept').style.width = "90%";
-
-    setTimeout(function () {
-        cookiesContainer.style.display = "none";
-    }, 1000)
+window.addEventListener('resize', () => {
+    if (page === "index")
+        updateImageOverlays()
 });
 
 window.addEventListener("scroll", function() {
@@ -210,15 +192,6 @@ window.addEventListener("scroll", function() {
     /* Mobile/Negative Scroll Fix */
     lastScrollPos = thisScrollPos <= 0 ? 0 : thisScrollPos;
 }, false);
-
-if(localStorage.getItem('isCookieAcceptedByPrompt') === null && isLocalStorageAvailable()) {
-    cookiesContainer.style.display = 'flex';
-    setTimeout(function () {
-        cookiesContainer.style.opacity = '1';
-    }, 300);
-} else {
-    cookiesContainer.style.display = 'none';
-}
 
 Array.from(removeTriggers).forEach(trigger => {
     let localIndexCallback = indexCallback;

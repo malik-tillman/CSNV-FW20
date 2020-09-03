@@ -1,0 +1,26 @@
+{
+  "name": "FW20",
+  "settings":[
+    {
+      "type": "header",
+      "content": "Fall/Winter 2020"
+    },
+    {
+      "type":"image_picker",
+      "id":"image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "imageAlt",
+      "label": "Image's alt text"
+    }
+  ],
+  "presets":[
+    {
+      "name": "FW20",
+      "category": "Image",
+      "settings":{}
+    }
+  ]
+}

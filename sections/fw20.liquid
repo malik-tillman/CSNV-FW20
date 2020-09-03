@@ -1,0 +1,35 @@
+<div class="fw20__container">
+    <div class="fw20-image__container">
+        <div class="fw20-image-overlay"></div>
+        <img src="{{ section.settings.image | img_url:'master' }}" alt="{{ section.settings.imageAlt }}">
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "FW20",
+"settings":[
+{
+"type": "header",
+"content": "Fall/Winter 2020"
+},
+{
+"type":"image_picker",
+"id":"image",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "imageAlt",
+"label": "Image's alt text"
+}
+],
+"presets":[
+{
+"name": "FW20",
+"category": "Image",
+"settings":{}
+}
+]
+}
+{% endschema %}

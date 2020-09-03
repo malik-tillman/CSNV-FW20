@@ -3,7 +3,7 @@
     <div class="grid">
 
       <div class="grid__item medium-up--one-half medium-up--push-one-quarter">
-        <div class="form-message form-message--success hide" id="ResetSuccess" tabindex="-1">
+        <div class="form-message form-message--success visually-hidden" id="ResetSuccess" tabindex="-1">
           Password reset go!
         </div>
 
@@ -85,7 +85,7 @@
           {% endform %}
         </div>
 
-        <div id="RecoverPasswordForm" class="hide password-recover-form">
+        <div id="RecoverPasswordForm" class="visually-hidden password-recover-form">
 
           <div class="text-center form-vertical">
             <h2 id="RecoverHeading">Recover Password</h2>
@@ -99,7 +99,7 @@
                 Add a hidden span to indicate the form was submitted succesfully.
               {% endcomment %}
               {% if form.posted_successfully? %}
-                <span class="hide reset-password-success"></span>
+                <span class="visually-hidden reset-password-success"></span>
               {% endif %}
 
               <div class="register-form__section">

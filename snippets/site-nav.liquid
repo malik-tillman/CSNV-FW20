@@ -1,6 +1,7 @@
 <ul class="nav--item__container">
     {% for link in linklists.main-menu.links %}
     {% assign child_list_handle = link.title | handleize %}
+
     {% if linklists[child_list_handle].links != blank %}
         <li class="dropdown__container">
             <button class="nav--dropdown__trigger" type="button">{{ link.title | escape }}</button>
@@ -42,6 +43,21 @@
 
     {% endif %}
     {% endif %}
+
+    <div class="cart--trigger__container">
+        {% if cart.item_count > 0 %}
+            <div class="cart--count__container">
+                <span id="cart--count" class="cart--count" aria-label="Amount of items in cart">[{{ cart.item_count }}]</span>
+            </div>
+
+        {% else %}
+            <div class="cart--count__container">
+                <span id="cart--count" class="cart--count" aria-label="Amount of items in cart"></span>
+            </div>
+        {% endif %}
+
+        <button class="cart--icon__container" type="button">Cart</button>
+    </div>
 
     <div class="nav__mask"></div>
 </ul>

@@ -1,7 +1,13 @@
 <script>
-	console.log("Hidden Page... Redirecting");
-	document.location.href = '/';
+	// console.log("Hidden Page... Redirecting");
+	// document.location.href = '/';
 </script>
+
+<div class="collection_title_container">
+	<div class="intrinsic__title_container">
+		<h1 id="collection_title">Shop FW/20</h1>
+	</div>
+</div>
 
 <div class="collection_container">
 	<section class="product-grid">
@@ -13,7 +19,7 @@
 				</a>
 
 				<div class="product-grid__details">
-					<h3 class="product-grid__name">{{ product.title }}</h3>
+					<h2 class="product-grid__name">{{ product.title }}</h2>
 					<span class="product-grid__price">{{ product.price | money }}</span>
 
 					{% unless product.available %}
